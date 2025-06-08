@@ -63,6 +63,8 @@ class Game(arcade.Window):
             self.ball.bottom = self.bar.top + 1
             self.ball.change_y = -self.ball.change_y
             self.score += 1
+            self.ball.change_y += 0.5
+            self.ball.change_x += 0.5
         if self.ball.bottom < 0:
             self.attempts -= 1
             self.setup()
